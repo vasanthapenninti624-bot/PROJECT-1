@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: white;
+    font-size:"roman"; 
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.card{
+    background-color: aqua;
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgb(61, 54, 54) (0,0,0,0.15);
+    border-radius: 20px;
+}
+img{
+    border-radius: 60%;
+    object-fit: cover;
+
+}
+.details p a{
+    text-decoration: none;
+    font-size: 17px;
+    color: blueviolet;
+}
+.buttons{
+    margin-top: 40px;
+    text-decoration: none;
+}
+.buttons a:hover{
+    background-color: brown;
+}
