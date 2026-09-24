@@ -3,29 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vasantha Id card</title>
-    <link rel="stylesheet" href="./style.CSS">
+    <title>Vasantha — ID Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a2a6c 0%, #2a4d8f 50%, #b21f1f 100%);
+            padding: 20px;
+        }
+
+        /* ---------- Card ---------- */
+        .card {
+            width: 100%;
+            max-width: 360px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 24px;
+            padding: 36px 28px 28px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            animation: popIn 0.7s ease both;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Decorative ring behind photo */
+        .photo-wrap {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 18px;
+        }
+
+        .photo-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: conic-gradient(#f7971e, #ffd200, #f7971e, #ffd200, #f7971e);
+            animation: spin 6s linear infinite;
+        }
+
+        .card img {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            display: block;
+        }
+
+        /* ---------- Text ---------- */
+        .card h2 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .role {
+            display: inline-block;
+            margin: 8px 0 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffd200;
+            background: rgba(255, 210, 0, 0.12);
+            border: 1px solid rgba(255, 210, 0, 0.35);
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+
+        /* ---------- Contact details ---------- */
+        .details {
+            text-align: left;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 16px;
+            margin-bottom: 20px;
+        }
+
+        .details a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            padding: 7px 10px;
+            border-radius: 10px;
+            transition: background 0.25s ease, transform 0.25s ease;
+            word-break: break-all;
+        }
+
+        .details a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(4px);
+        }
+
+        .details .icon {
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        /* ---------- Buttons ---------- */
+        .button {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button a {
+            flex: 1;
+            text-decoration: none;
+            text-align: center;
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 10px 6px;
+            border-radius: 12px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        }
+
+        .button a:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-linkedin {
+            color: #ffffff;
+            background: linear-gradient(135deg, #0077b5, #005a8c);
+            box-shadow: 0 6px 16px rgba(0, 119, 181, 0.4);
+        }
+
+        .btn-github {
+            color: #1a1a2e;
+            background: linear-gradient(135deg, #ffffff, #e8e8e8);
+            box-shadow: 0 6px 16px rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-hackerrank {
+            color: #ffffff;
+            background: linear-gradient(135deg, #2ec866, #1f9c4b);
+            box-shadow: 0 6px 16px rgba(46, 200, 102, 0.4);
+        }
+
+        /* ---------- Animations ---------- */
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.9) translateY(20px); }
+            to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <div class ="card">
-        <img src="./WhatsApp Image 2025-08-15 at 14.58.01_9c42bfdf.jpg"  alt="my image" width="90px">
-        <h2>vasantha</h2>
-        <p>Web tech trainer</p>
+
+    <div class="card">
+        <div class="photo-wrap">
+            <img src="./WhatsApp Image 2025-08-15 at 14.58.01_9c42bfdf.jpg" alt="Vasantha">
+        </div>
+
+        <h2>Vasantha</h2>
+        <span class="role">Web Tech Trainer</span>
+
         <div class="details">
-        <p>
-            <a href="vasanthapenninti624@gmail.com"> </a>            
-        </p>
-        <p>
-            <a href ="tel :+91 123456789">📞+91 123456789</a>
-        </p>
-        <p>
-            <a href="https://www.google.com/maps">📍hyderabad</a>
-        </p>
-     </div>
-     <div class="button">
-        <a href="www.linkedin.com/in/vasantha-penninti-12b3753a7">Linkedin</a>
-        <a href="vasanthapenninti624-bot">Github</a>
-        <a href="@vasanthapennint1">Hackerrank</a>
-     </div>
+            <p><a href="mailto:vasanthapenninti624@gmail.com"><span class="icon">✉️</span>vasanthapenninti624@gmail.com</a></p>
+            <p><a href="tel:+91123456789"><span class="icon">📞</span>+91 123456789</a></p>
+            <p><a href="https://www.google.com/maps/search/Hyderabad" target="_blank" rel="noopener"><span class="icon">📍</span>Hyderabad</a></p>
+        </div>
+
+        <div class="button">
+            <a class="btn-linkedin" href="https://www.linkedin.com/in/vasantha-penninti-12b3753a7" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn-github" href="https://github.com/vasanthapenninti624-bot" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn-hackerrank" href="https://www.hackerrank.com/@vasanthapennint1" target="_blank" rel="noopener">HackerRank</a>
+        </div>
+    </div>
+
 </body>
 </html>
+"""
+with open("/mnt/agents/output/vasantha-id-card.html", "w") as f:
+    f.write(html)
+print("saved")
